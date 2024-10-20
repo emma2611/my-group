@@ -6,9 +6,6 @@ interface Props {
   children?: ReactNode;
 }
 
-function Component({ children }: Props) {
-  return children;
-}
 import {
   motion,
   useAnimationFrame,
