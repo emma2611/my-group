@@ -14,7 +14,7 @@ const [active, setActive] = useState<string | null>(null)
          <Link href="/"onClick={() => setActive("Home")}>Home</Link>
          </MenuItem>
          <MenuItem setActive={setActive} active={active} item="courses">
-         <Link href="/courses"onClick={() => setActive("courses")}>courses</Link>
+         <Link href="/courses"onClick={() => setActive("courses")}>Courses</Link>
          </MenuItem>
          <MenuItem setActive={setActive} active={active} item="Contact">
          <Link href="/contact"onClick={() => setActive("Contact")}>Contact</Link>

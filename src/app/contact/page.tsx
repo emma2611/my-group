@@ -31,10 +31,6 @@ const ContactPage = () => {
                             </button>
                           </form>
                          </div>
-                         <div className="hidden md:flex items-center justify-center w-1/2">
-            <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-gray-700">
-              </div>
-              </div>
                        </div>
                      </div>
   );

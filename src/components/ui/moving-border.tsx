@@ -1,11 +1,5 @@
 "use client";
-import React, { ButtonHTMLAttributes } from "react";
-import { ReactNode } from "react";
-
-interface Props {
-  children?: ReactNode;
-}
-
+import React, { ReactNode, ButtonHTMLAttributes } from "react";
 import {
   motion,
   useAnimationFrame,
@@ -27,18 +21,17 @@ export function Button({
   ...otherProps
 }: {
   borderRadius?: string;
-  children: React.ReactNode;
-  as?:React.ElementType;
+  children: ReactNode;
+  as?: React.ElementType; // Changed to React.ElementType
   containerClassName?: string;
   borderClassName?: string;
   duration?: number;
   className?: string;
-}& ButtonHTMLAttributes<HTMLButtonElement>)
- {
+} & ButtonHTMLAttributes<HTMLButtonElement>) { // Added button attributes
   return (
     <Component
       className={cn(
-        "bg-transparent relative text-xl  h-16 w-40 p-[1px] overflow-hidden ",
+        "bg-transparent relative text-xl h-16 w-40 p-[1px] overflow-hidden",
         containerClassName
       )}
       style={{
@@ -82,12 +75,11 @@ export const MovingBorder = ({
   ry,
   ...otherProps
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   duration?: number;
   rx?: string;
   ry?: string;
-} & React.SVGProps<SVGSVGElement>) =>  // Used SVGProps for otherProps 
-  {
+} & React.SVGProps<SVGSVGElement>) => { // Used SVGProps for otherProps
   const pathRef = useRef<SVGRectElement | null>(null);
   const progress = useMotionValue<number>(0);
 
@@ -142,4 +134,4 @@ export const MovingBorder = ({
       </motion.div>
     </>
   );
-};
+}
